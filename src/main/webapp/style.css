@@ -1,0 +1,131 @@
+/*
+Name: Jeremy Moore and Alec Maly
+Net ID: jmoore28 and amaly1
+COSC 311 Course Project
+*/
+
+body {
+  background-color: #CBB682;
+  color: #181510;
+}
+
+h1, h3 {
+    text-align: center;
+    margin: 1em 0 0 0;
+}
+
+#body {
+    display: block;
+    width: 85%;
+    padding-top: 1em;
+    margin: 1em auto;
+}
+
+#main {
+    display: inline-block;
+    width: 58%;
+    margin: 1em auto;
+}
+
+.men {
+    display: inline-block;
+    width: 24%;
+    margin-right: 5%;
+}
+
+.women {
+    display: inline-block;
+    width: 24%;
+}
+
+.matches {
+    display: inline-block;
+    width: 38%;
+    margin-right: 5%;
+}
+
+.blank {
+    font-family: "Verdana";
+    padding: 0.4em;
+    margin: 0.5em;
+    width: 24%;
+    min-height: 1.15em;
+    border-radius: 0.5em;
+}
+
+.name {
+    background-color: #FF8000;
+    font-family: "Verdana";
+    text-align: center;
+    padding: 0.4em;
+    margin: 0.5em;
+    width: 80%;
+    border-radius: 0.5em;
+}
+
+.matches_name {
+    background-color: #FF8000;
+    font-family: "Verdana";
+    text-align: center;
+    padding: 0.4em;
+    margin: 0.5em;
+    width: 80%;
+    border-radius: 0.5em;
+}
+
+.buttons {
+    margin-left: 18%;
+    margin-top: 1em;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.6em 1.6em;
+    margin-right: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    border-radius: 0.5em;
+}
+
+#men_prefs, #women_prefs {
+    margin-top: 5%;
+    display: inline-block;
+    border-radius: 0.5em;
+}
+
+#men_prefs {
+    margin-right: 5%;
+    background-color: lightblue;
+}
+
+#women_prefs {
+    background-color: pink;
+}
+
+th {
+    text-align: left;
+    padding-right: 0.8em;
+}
+
+td {
+    padding-right: 0.6em;
+}
+
+.partner {
+    background-color: yellow;
+    border-radius: 0.4em;
+}
+
+#messages {
+    vertical-align: top;
+    display: inline-block;
+    line-height: 1.4em;
+}
+
+br {
+    height: 5%;
+}
