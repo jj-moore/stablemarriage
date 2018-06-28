@@ -6,6 +6,13 @@ COSC 311 Course Project
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="pro.jmoore.stablemarriage.*"%>
+<%
+    Driver driver = (Driver) session.getAttribute("drivers");
+    if (driver == null) {
+        driver = new Driver(5);
+        session.setAttribute("drivers", driver);
+    }
+%>
 
 <!DOCTYPE html>
 <html>
@@ -23,7 +30,7 @@ COSC 311 Course Project
         <div id="body">
             <div id="main">
                 <div class="men">
-                    <c:forEach var="man" items="${Driver.men}">
+                    <c:forEach var="man" items="${drivers.men}">
                         <c:choose>
                             <c:when test="${man.partner == null}">
                                 <p class="name">${man}</p>
@@ -36,7 +43,7 @@ COSC 311 Course Project
                 </div>
 
                 <div class="matches">
-                    <c:forEach var="man" items="${Driver.men}">
+                    <c:forEach var="man" items="${drivers.men}">
                         <c:choose>
                             <c:when test="${man.partner != null}">
                                 <p class="matches_name">${man} and ${man.partner}</p>
@@ -49,7 +56,7 @@ COSC 311 Course Project
                 </div>
 
                 <div class="women">
-                    <c:forEach var="woman" items="${Driver.women}">
+                    <c:forEach var="woman" items="${drivers.women}">
                         <c:choose>
                             <c:when test="${woman.partner == null}">
                                 <p class="name">${woman}</p>
@@ -70,7 +77,7 @@ COSC 311 Course Project
                 <div id="preferences">
                     <div id="men_prefs">
                         <table><tr>
-                                <c:forEach var="man" items="${Driver.men}">
+                                <c:forEach var="man" items="${drivers.men}">
                                     <th class="prefs">${man}</th>
                                         <c:forEach var="preference" items="${man.preferences}">
                                             <c:choose>
@@ -89,7 +96,7 @@ COSC 311 Course Project
 
                     <div id="women_prefs">
                         <table><tr>
-                                <c:forEach var="woman" items="${Driver.women}">
+                                <c:forEach var="woman" items="${drivers.women}">
                                     <th class="prefs">${woman}</th>
                                         <c:forEach var="preference" items="${woman.preferences}">
                                             <c:choose>
@@ -107,7 +114,7 @@ COSC 311 Course Project
                     </div>
                 </div>
             </div>
-            <div id="messages"><p>${Driver.message}</p></div>
+            <div id="messages"><p>${drivers.message}</p></div>
         </div>
     </body>
 </html>

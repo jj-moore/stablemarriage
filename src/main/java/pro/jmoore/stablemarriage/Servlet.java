@@ -23,7 +23,7 @@ public class Servlet extends HttpServlet {
         // IF DRIVER CLASS ISN'T IN SESSION OBJECT,
         // CREATE NEW DRIVER OBJECT AND STORE IN SESSION OBJECT
         HttpSession session = request.getSession();
-        Driver driver = (Driver) session.getAttribute("Driver");
+        Driver driver = (Driver) session.getAttribute("drivers");
         
         // PROCESS WHICH BUTTON WAS PUSHED
         String action = request.getParameter("action");
@@ -31,7 +31,7 @@ public class Servlet extends HttpServlet {
         switch (action) {
             case "reset":
                 driver = new Driver(5);
-                session.setAttribute("Driver", driver);
+                session.setAttribute("drivers", driver);
                 break;
             case "next":
                 driver.round();
