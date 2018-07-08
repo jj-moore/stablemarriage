@@ -10,6 +10,7 @@ public class Driver {
     private Person[] men;
     private Person[] women;
     private String message;
+    private String lastMessage;
     private int index;
 
     public Driver(int size) {
@@ -34,6 +35,11 @@ public class Driver {
     public String getMessage() {
         return message;
     }
+    
+    // REQUIRED FOR JSTL
+    public String getLastMessage() {
+        return lastMessage;
+    }
 
     // ONE STEP AT A TIME
     public void step() {
@@ -45,7 +51,8 @@ public class Driver {
             if (index == 0)
                 message += "<br>";
         }
-        message += men[index].propose() + "<br>";
+        lastMessage = men[index].propose() + "<br>";
+        message += lastMessage;
         index = (index + 1) % men.length;
         if (index == 0)
             message += "<br>";

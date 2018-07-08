@@ -22,57 +22,60 @@ COSC 311 Course Project
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>COSC 311 Project</title>
     </head>
-    <header>
-        <h1>GALE-SHAPLEY ALGORITHM</h1>
-        <h3>Alec Maly and Jeremy Moore</h3>
-    </header>
     <body>
+        <header>
+            <h1>GALE-SHAPLEY ALGORITHM</h1>
+            <h3>Alec Maly and Jeremy Moore</h3>
+        </header>
         <div id="body">
             <div id="main">
-                <div class="men">
-                    <c:forEach var="man" items="${drivers.men}">
-                        <c:choose>
-                            <c:when test="${man.partner == null}">
-                                <p class="name">${man}</p>
-                            </c:when>
-                            <c:otherwise>
-                                <p class="blank">&nbsp;</p>
-                            </c:otherwise>
-                        </c:choose>
-                    </c:forEach>
-                </div>
+                <div id="display">
+                    <div class="men">
+                        <c:forEach var="man" items="${drivers.men}">
+                            <c:choose>
+                                <c:when test="${man.partner == null}">
+                                    <p class="name">${man}</p>
+                                </c:when>
+                                <c:otherwise>
+                                    <p class="blank">&nbsp;</p>
+                                </c:otherwise>
+                            </c:choose>
+                        </c:forEach>
+                    </div>
 
-                <div class="matches">
-                    <c:forEach var="man" items="${drivers.men}">
-                        <c:choose>
-                            <c:when test="${man.partner != null}">
-                                <p class="matches_name">${man} and ${man.partner}</p>
-                            </c:when>
-                            <c:otherwise>
-                                <p class="blank">&nbsp;</p>
-                            </c:otherwise>
-                        </c:choose>
-                    </c:forEach>
-                </div>
+                    <div class="matches">
+                        <c:forEach var="man" items="${drivers.men}">
+                            <c:choose>
+                                <c:when test="${man.partner != null}">
+                                    <p class="matches_name">${man} &amp; ${man.partner}</p>
+                                </c:when>
+                                <c:otherwise>
+                                    <p class="blank">&nbsp;</p>
+                                </c:otherwise>
+                            </c:choose>
+                        </c:forEach>
+                    </div>
 
-                <div class="women">
-                    <c:forEach var="woman" items="${drivers.women}">
-                        <c:choose>
-                            <c:when test="${woman.partner == null}">
-                                <p class="name">${woman}</p>
-                            </c:when>
-                            <c:otherwise>
-                                <p class="blank">&nbsp;</p>
-                            </c:otherwise>
-                        </c:choose>
-                    </c:forEach>
+                    <div class="women">
+                        <c:forEach var="woman" items="${drivers.women}">
+                            <c:choose>
+                                <c:when test="${woman.partner == null}">
+                                    <p class="name">${woman}</p>
+                                </c:when>
+                                <c:otherwise>
+                                    <p class="blank">&nbsp;</p>
+                                </c:otherwise>
+                            </c:choose>
+                        </c:forEach>
+                    </div>
                 </div>
+                <p id="lastMessage">${drivers.lastMessage}</p>
                 <div class="buttons">
                     <form action="Servlet" method="post">
-                        <button class="button" name="action" type="submit" value="step">Step</button>
-                        <button class="button" name="action" type="submit" value="next">Next Round</button>
-                        <button class="button" name="action" type="submit" value="reset">Reset</button>
+                        <button class="button" name="action" type="submit" value="step" id="step">Step</button>
+                        <button class="button" name="action" type="submit" value="reset" id="reset">Reset</button>
                     </form>
+                    <script src="main.js" type="text/javascript" charset="utf-8"></script>
                 </div>
                 <div id="preferences">
                     <div id="men_prefs">

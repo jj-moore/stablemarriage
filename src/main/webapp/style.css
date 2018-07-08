@@ -7,6 +7,7 @@ COSC 311 Course Project
 body {
   background-color: #CBB682;
   color: #181510;
+  margin: auto 5px;
 }
 
 h1, h3 {
@@ -15,33 +16,36 @@ h1, h3 {
 }
 
 #body {
-    display: block;
-    width: 85%;
     padding-top: 1em;
-    margin: 1em auto;
 }
 
-#main {
-    display: inline-block;
-    width: 58%;
-    margin: 1em auto;
+#display {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 500px;
 }
 
 .men {
-    display: inline-block;
-    width: 24%;
-    margin-right: 5%;
-}
-
-.women {
-    display: inline-block;
-    width: 24%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: content;
 }
 
 .matches {
-    display: inline-block;
-    width: 38%;
-    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    flex-basis: content;
+}
+
+.women {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: content;
 }
 
 .blank {
@@ -54,7 +58,7 @@ h1, h3 {
 }
 
 .name {
-    background-color: #FF8000;
+    background-color: #ED9121;
     font-family: "Verdana";
     text-align: center;
     padding: 0.4em;
@@ -64,7 +68,7 @@ h1, h3 {
 }
 
 .matches_name {
-    background-color: #FF8000;
+    background-color: #ED9121;
     font-family: "Verdana";
     text-align: center;
     padding: 0.4em;
@@ -73,14 +77,18 @@ h1, h3 {
     border-radius: 0.5em;
 }
 
+#lastMessage {
+    text-align: center;
+}
+
 .buttons {
-    margin-left: 18%;
+    display: flex;
+    justify-content: center;
     margin-top: 1em;
 }
 
 .button {
     background-color: #4CAF50;
-    border: none;
     color: white;
     padding: 0.6em 1.6em;
     margin-right: 0.5em;
@@ -91,6 +99,12 @@ h1, h3 {
     border-radius: 0.5em;
 }
 
+#preferences {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 #men_prefs, #women_prefs {
     margin-top: 5%;
     display: inline-block;
@@ -98,7 +112,6 @@ h1, h3 {
 }
 
 #men_prefs {
-    margin-right: 5%;
     background-color: lightblue;
 }
 
@@ -115,17 +128,25 @@ td {
     padding-right: 0.6em;
 }
 
+
 .partner {
     background-color: yellow;
     border-radius: 0.4em;
 }
 
 #messages {
-    vertical-align: top;
     display: inline-block;
+    margin: auto;
+    vertical-align: top;
     line-height: 1.4em;
 }
 
 br {
     height: 5%;
+}
+
+@media (min-width: 769px) {
+    #messages {
+        margin-left: 30%;
+    }
 }
