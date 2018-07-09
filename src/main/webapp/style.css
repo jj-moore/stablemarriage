@@ -7,7 +7,6 @@ COSC 311 Course Project
 body {
   background-color: #CBB682;
   color: #181510;
-  margin: auto 5px;
 }
 
 h1, h3 {
@@ -15,16 +14,15 @@ h1, h3 {
     margin: 1em 0 0 0;
 }
 
-#body {
+main {
     padding-top: 1em;
 }
 
 #display {
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
-    max-width: 500px;
 }
 
 .men {
@@ -32,6 +30,7 @@ h1, h3 {
     flex-direction: column;
     flex-grow: 1;
     flex-basis: content;
+    max-width: 80px;
 }
 
 .matches {
@@ -39,6 +38,7 @@ h1, h3 {
     flex-direction: column;
     flex-grow: 2;
     flex-basis: content;
+    max-width: 140px;
 }
 
 .women {
@@ -46,6 +46,7 @@ h1, h3 {
     flex-direction: column;
     flex-grow: 1;
     flex-basis: content;
+    max-width: 80px;
 }
 
 .blank {
@@ -102,7 +103,7 @@ h1, h3 {
 #preferences {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #men_prefs, #women_prefs {
@@ -113,6 +114,7 @@ h1, h3 {
 
 #men_prefs {
     background-color: lightblue;
+    margin-right: 1em;
 }
 
 #women_prefs {
@@ -128,25 +130,24 @@ td {
     padding-right: 0.6em;
 }
 
-
 .partner {
     background-color: yellow;
     border-radius: 0.4em;
 }
 
 #messages {
-    display: inline-block;
-    margin: auto;
+    margin: 5px auto;
+    padding: 0 5px;
+    width: 30em;
     vertical-align: top;
     line-height: 1.4em;
+    
 }
 
 br {
     height: 5%;
 }
 
-@media (min-width: 769px) {
-    #messages {
-        margin-left: 30%;
-    }
+@media (min-device-width: 768px) {
+
 }
