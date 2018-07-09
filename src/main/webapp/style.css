@@ -30,7 +30,7 @@ main {
     flex-direction: column;
     flex-grow: 1;
     flex-basis: content;
-    max-width: 80px;
+    max-width: 5em;
 }
 
 .matches {
@@ -38,7 +38,7 @@ main {
     flex-direction: column;
     flex-grow: 2;
     flex-basis: content;
-    max-width: 140px;
+    max-width: 9em;
 }
 
 .women {
@@ -46,14 +46,14 @@ main {
     flex-direction: column;
     flex-grow: 1;
     flex-basis: content;
-    max-width: 80px;
+    max-width: 5em;
 }
 
 .blank {
     font-family: "Verdana";
     padding: 0.4em;
     margin: 0.5em;
-    width: 24%;
+    width: 5em;
     min-height: 1.15em;
     border-radius: 0.5em;
 }
@@ -64,7 +64,7 @@ main {
     text-align: center;
     padding: 0.4em;
     margin: 0.5em;
-    width: 80%;
+    width: 4em;
     border-radius: 0.5em;
 }
 
@@ -74,7 +74,7 @@ main {
     text-align: center;
     padding: 0.4em;
     margin: 0.5em;
-    width: 80%;
+    width: 8em;
     border-radius: 0.5em;
 }
 
@@ -107,7 +107,7 @@ main {
 }
 
 #men_prefs, #women_prefs {
-    margin-top: 5%;
+    margin-top: 2em;
     display: inline-block;
     border-radius: 0.5em;
 }
@@ -146,8 +146,4 @@ td {
 
 br {
     height: 5%;
-}
-
-@media (min-device-width: 768px) {
-
 }

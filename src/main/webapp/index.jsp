@@ -18,6 +18,7 @@ COSC 311 Course Project
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="normalize.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>COSC 311 Project</title>
@@ -25,7 +26,7 @@ COSC 311 Course Project
     <body>
         <header>
             <h1>GALE-SHAPLEY ALGORITHM</h1>
-            <h3>Alec Maly and Jeremy Moore</h3>
+            <h3>Jeremy Moore and Alec Maly</h3>
         </header>
         <main>
             <div id="display">
